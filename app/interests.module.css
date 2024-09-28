@@ -1,18 +1,23 @@
 .container {
-  text-align: center;
-  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
 }
-
 .block {
   background-color: rgb(177, 179, 179);
   padding: 1em;
-  width: 80%;
-  max-width: 800px;
-  margin: auto;
-  margin-top: 2em;
+  width: 17%;
+  margin: 0.5%;
   border-radius: 15px;
   color: black;
   position: relative;
+  height: 42vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
 }
 
 .title {
@@ -23,6 +28,11 @@
   overflow: hidden;
   text-overflow: ellipsis;
   width: 85%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .view {
@@ -41,42 +51,46 @@
   margin-bottom: 0.5em;
   overflow: hidden;
   text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 14;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .publicdate {
   position: absolute;
   right: 1em;
-  margin-top: 0.2em;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.category {
-  text-align: left;
-  padding: 0.2em;
-}
-
-.undercategory {
-  display: inline;
-  border: 2px dashed blueviolet;
-  border-radius: 15px;
-  padding: 0.3em;
-}
-
-.publicdate {
+  margin-top: 0.8em;
   text-align: right;
   width: 100%;
 }
+
+.category {
+    text-align: left;
+    padding: 0.3em;
+    max-width: 50%;
+    overflow: hidden;
+  }
+  
+  .undercategory {
+    display: inline-block;
+    border: 2px dashed blueviolet;
+    border-radius: 15px;
+    padding: 0.3em;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
 
 .reactons {
   display: flex;
   justify-content: center;
   width: 100%;
 }
+
 .reaction {
   background-color: inherit;
   cursor: pointer;
@@ -95,8 +109,8 @@
 .addbutton {
   width: 100%;
   text-align: center;
-  margin-top: 2em;
-  margin-bottom: 2em;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
 }
 
 .loader {
@@ -104,7 +118,7 @@
   text-align: center;
   width: 100%;
   margin: auto;
-  margin-top: 1.5em;
+  margin-top: 1vh;
   margin-bottom: 1.5em;
 }
 .loadicon {
@@ -112,8 +126,27 @@
   margin: auto;
 }
 
-@media screen and (max-width: 700px) {
-  .block {
-    width: 95%;
+@media screen and (max-width: 1200px) {
+  .container {
+    text-align: center;
+    margin: auto;
   }
+
+  .block {
+    background-color: #b1b3b3;
+    padding: 1em;
+    width: 95%;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 2em;
+    border-radius: 15px;
+    color: black;
+    position: relative;
+  }
+}
+@media screen and (min-width: 1200px) and (max-width: 1700px){
+    .block {
+        padding: 0.4em;
+    }
+    
 }

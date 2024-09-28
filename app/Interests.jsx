@@ -5,7 +5,6 @@ import { Eye, ThumbsDown, ThumbsUp } from "lucide-react";
 import Cookies from "js-cookie";
 import { ClockLoader } from "react-spinners";
 
-
 const Interests = () => {
   const [pokemons, setPokemons] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -62,6 +61,7 @@ const Interests = () => {
       }
 
       const data = await response.json();
+      console.log(data);
       if (Array.isArray(data)) {
         setPokemons((prevPokemons) => [...prevPokemons, ...data]);
       } else if (data.results && Array.isArray(data.results)) {
@@ -134,11 +134,17 @@ const Interests = () => {
 
     const day = String(date.getUTCDate()).padStart(2, "0");
     const month = String(date.getUTCMonth() + 1).padStart(2, "0");
-    const year = date.getUTCFullYear();
     const hours = String(date.getUTCHours()).padStart(2, "0");
     const minutes = String(date.getUTCMinutes()).padStart(2, "0");
 
-    return `${hours}:${minutes} ${day}/${month}/${year}`;
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth >= 1200 && screenWidth <= 1600) {
+      return `${hours}:${minutes} ${day}/${month}`;
+    } else {
+      const year = date.getUTCFullYear();
+      return `${hours}:${minutes} ${day}/${month}/${year}`;
+    }
   }
 
   const getVoteColor = (videoId, voteType) => {
@@ -156,7 +162,9 @@ const Interests = () => {
         {pokemons.map((video) => (
           <div className={styles.block} key={video.id}>
             <div className={styles.title}>{video?.title}</div>
-            <div className={styles.description}>{video?.description}</div>
+            <div className={styles.description}>
+              {video?.description || "Описание не добавлено"}
+            </div>
             <div className={styles.view}>
               <Eye size={20} color="blueviolet" />
               {video?.year_views}
@@ -188,7 +196,11 @@ const Interests = () => {
           </div>
         ))}
       </div>
-      {loading && <div className={styles.loader}><ClockLoader className={styles.loadicon} color="blueviolet"/></div>}
+      {loading && (
+        <div className={styles.loader}>
+          <ClockLoader className={styles.loadicon} color="#b1b3b3" />
+        </div>
+      )}
       {!loading && pokemons.length > 0 && (
         <div className={styles.addbutton}>
           <button
