@@ -1,0 +1,119 @@
+.container {
+  text-align: center;
+  margin: auto;
+}
+
+.block {
+  background-color: rgb(177, 179, 179);
+  padding: 1em;
+  width: 80%;
+  max-width: 800px;
+  margin: auto;
+  margin-top: 2em;
+  border-radius: 15px;
+  color: black;
+  position: relative;
+}
+
+.title {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  margin: 0;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 85%;
+}
+
+.view {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  color: blueviolet;
+}
+
+.description {
+  text-align: left;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.publicdate {
+  position: absolute;
+  right: 1em;
+  margin-top: 0.2em;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.category {
+  text-align: left;
+  padding: 0.2em;
+}
+
+.undercategory {
+  display: inline;
+  border: 2px dashed blueviolet;
+  border-radius: 15px;
+  padding: 0.3em;
+}
+
+.publicdate {
+  text-align: right;
+  width: 100%;
+}
+
+.reactons {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.reaction {
+  background-color: inherit;
+  cursor: pointer;
+  border: 0;
+}
+.active {
+  background-color: blueviolet;
+}
+.addmore {
+  color: black;
+  padding: 1em;
+  border-radius: 10px;
+  border: 2px dashed blueviolet;
+  background-color: rgb(177, 179, 179);
+}
+.addbutton {
+  width: 100%;
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.loader {
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+.loadicon {
+  width: 100%;
+  margin: auto;
+}
+
+@media screen and (max-width: 700px) {
+  .block {
+    width: 95%;
+  }
+}
