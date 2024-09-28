@@ -166,8 +166,8 @@ const Interests = () => {
               {video?.description || "Описание не добавлено"}
             </div>
             <div className={styles.view}>
-              <Eye size={20} color="blueviolet" />
-              {video?.year_views}
+              <Eye size={20} color="blueviolet"/>
+              <p style={{marginLeft: '0.1em'}}>{video?.year_views}</p>
             </div>
             <div className={styles.underline}>
               <div className={styles.publicdate}>
