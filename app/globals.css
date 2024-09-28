@@ -5,7 +5,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #555555;
+    --background: #14191f;
     --foreground: #ededed;
   }
 }
@@ -16,6 +16,7 @@ body {
   overflow-x: hidden;
   margin:auto;
   text-align: center;
+  color: white;
 }
 
 body {

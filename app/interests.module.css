@@ -6,12 +6,12 @@
   width: 100%;
 }
 .block {
-  background-color: #ededed;
+  background-color: #1c232b;
   padding: 1em;
   width: 17%;
   margin: 0.5%;
   border-radius: 15px;
-  color: black;
+  color: white;
   position: relative;
   height: 42vh;
   display: flex;
@@ -42,7 +42,7 @@
   position: absolute;
   top: 1em;
   right: 1em;
-  color: blueviolet;
+  color: #02a0ea;
 }
 
 .description {
@@ -75,7 +75,7 @@
   
   .undercategory {
     display: inline-block;
-    border: 2px dashed blueviolet;
+    border: 2px dashed #02a0ea;
     border-radius: 15px;
     padding: 0.3em;
     max-width: 100%;
@@ -97,14 +97,15 @@
   border: 0;
 }
 .active {
-  background-color: blueviolet;
+  background-color: #02a0ea;
 }
 .addmore {
-  color: black;
+  color: white;
+  font-weight: bold;
   padding: 1em;
   border-radius: 10px;
-  border: 2px dashed blueviolet;
-  background-color: rgb(177, 179, 179);
+  border: 2px dashed #02a0ea;
+  background-color: #02a0ea;
 }
 .addbutton {
   width: 100%;
