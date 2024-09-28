@@ -56,7 +56,6 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 11;
   overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .publicdate {
