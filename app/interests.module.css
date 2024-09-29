@@ -133,14 +133,12 @@
   }
 
   .block {
-    background-color: #b1b3b3;
     padding: 1em;
     width: 95%;
     max-width: 800px;
     margin: auto;
     margin-top: 2em;
     border-radius: 15px;
-    color: black;
     position: relative;
   }
 }
